@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <input class="toggle-dark-mode" type="checkbox" name="theme">
+
+    <main id="container">
+        <section id="data">
+            <label for="height">Sua altura (cm)</label>
+            <input id="height" type="range" name="height" value="0" min="100" max="225"
+                oninput="displayHeight.value=value" onchange="displayHeight.value=value">
+
+            <input id="displayHeight" type="number" value="0" oninput="height.value=value" onchange="height.value=value">
+
+            <label for="weight">Seu peso (kg)</label>
+            <input id="weight" type="range" name="weight" value="0" min="0" max="300"
+                oninput="displayWeight.value=value" onchange="displayWeight.value=value">
+
+            <input id="displayWeight" type="number" value="0" oninput="weight.value=value" onchange="weight.value=value">
+        </section>
+
+        <section id="results">
+            <button id="calculateButton">Calcular</button>
+        </section>
+    </main>
+
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
